@@ -1,0 +1,104 @@
+.clicker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius);
+  min-height: 400px;
+}
+
+.stats {
+  text-align: center;
+  
+  h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+}
+
+.clickButton {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(100, 108, 255, 0.5);
+  }
+  
+  &:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+  
+  &:disabled {
+    background: #666;
+    cursor: not-allowed;
+  }
+}
+
+// Скіни
+.golden {
+  background: linear-gradient(45deg, #ffd700, #ffa500);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+.neon {
+  background: linear-gradient(45deg, #00ff00, #00ffff);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+  animation: neonPulse 2s infinite;
+}
+
+.rainbow {
+  background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+  background-size: 200% 200%;
+  animation: rainbowMove 3s infinite;
+}
+
+.antiBonuses {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.antiBonus {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  color: #ff4444;
+  font-weight: bold;
+  animation: shake 0.5s infinite;
+}
+
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 30px rgba(0, 255, 0, 0.5); }
+  50% { box-shadow: 0 0 50px rgba(0, 255, 0, 0.8); }
+  100% { box-shadow: 0 0 30px rgba(0, 255, 0, 0.5); }
+}
+
+@keyframes rainbowMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+} 

@@ -1,0 +1,82 @@
+.prestige {
+  h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+}
+
+.prestigeInfo {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  
+  p {
+    margin-bottom: 0.5rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.reward {
+  color: #ffd700 !important;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.prestigeButton {
+  width: 100%;
+  background: linear-gradient(45deg, #ffd700, #ffa500);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+  
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  }
+  
+  &:disabled {
+    background: #666;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.resetButton {
+  width: 100%;
+  background: linear-gradient(45deg, #ff4444, #cc0000);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(255, 68, 68, 0.5);
+  }
+}
+
+.prestigeDescription {
+  p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+} 
